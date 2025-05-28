@@ -464,7 +464,7 @@
     </build>
 
     <profiles>
-        <profile>
+    <!--  <profile>
             <id>H2</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -485,8 +485,8 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>
-        <profile>
+        </profile>  -->
+    <!--    <profile>
             <id>HSQLDB</id>
             <properties>
                 <db.script>hsqldb</db.script>
@@ -495,7 +495,7 @@
                 <jdbc.url>jdbc:hsqldb:mem:petclinic</jdbc.url>
                 <jdbc.username>sa</jdbc.username>
                 <jdbc.password/>
-            </properties>
+            </properties> 
             <dependencies>
                 <dependency>
                     <groupId>org.hsqldb</groupId>
@@ -504,9 +504,12 @@
                     <scope>runtime</scope>
                 </dependency>
             </dependencies>
-        </profile>
+        </profile> -->
         <profile>
             <id>MySQL</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>    
             <properties>
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
