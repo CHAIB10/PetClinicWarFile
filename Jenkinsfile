@@ -10,6 +10,7 @@ pipeline {
     stage('Build App') {
       steps {
         sh '/opt/maven/bin/mvn clean package -DskipTests'
+        sh 'cp target/petclinic.war .'
       }
     }
 
