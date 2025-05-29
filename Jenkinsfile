@@ -4,6 +4,7 @@ pipeline {
   environment {
     DOCKER_IMAGE = "hajar4/petclinic-app:latest"
     DOCKER_CREDENTIALS_ID = "dockerhub-creds" // à créer dans Jenkins
+    KUBECONFIG = '/var/lib/jenkins/.kube/config'
   }
 
   stages {
