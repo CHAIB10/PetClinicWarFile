@@ -33,8 +33,8 @@ pipeline {
 
     stage('Deploy to Kubernetes') {
       steps {
-        sh 'kubectl apply -f /home/vagrant/petclinic-deployment.yml'
-        sh 'kubectl apply -f /home/vagrant/petclinic-service.yml'
+       sh 'kubectl apply -f petclinic-deployment.yml'
+       sh 'kubectl apply -f petclinic-service.yml'
       }
     }
   }
